@@ -1,0 +1,21 @@
+{
+  "name": "moviefinder",
+  "version": "1.0.0",
+  "description": "This application find best movie in the Internet",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon server.js",
+    "debug": "node --inspect brk script.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.0",
+    "morgan": "^1.9.1",
+    "unirest": "^0.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
