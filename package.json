@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "npx nodemon server.js",
-    "debug": "node --inspect brk script.js"
+    "debug": "node --inspect brk server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "hbs": "^4.1.0",
     "morgan": "^1.9.1",
