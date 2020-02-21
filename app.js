@@ -2,12 +2,10 @@
 const express = require("express");
 const app = express();
 
-cors = require('cors');
-app.use(cors({
-  origin: 'http://mysite:3000',
-  credentials: true
-}));
-app.options('*', cors());
+cors = require('cors'); 
+
+app.use(cors());
+// app.options('*', cors());
 
 // HTTP request logger middleware for node.js.
 // Логгирование деталей запросов.

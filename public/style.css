@@ -33,3 +33,12 @@ width: 200px;
       height:240px;
     }
   }
+
+  .movie{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }

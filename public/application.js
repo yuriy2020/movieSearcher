@@ -10,16 +10,16 @@ document.forms["searchForm"].addEventListener('submit', async (event) => {
 
     let searchMovie = event.target.children[0].value
     console.log('Client send>>>', searchMovie);
+    window.location =`/search/${searchMovie}`
 
-    const response = await fetch('/search', {
-        method: 'POST',
-       
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({search: searchMovie})
-    })
-    const result = await response.json();
+    // const response = await fetch(`/search/${searchMovie}` , {
+    //     method: 'GET',
+    //     headers: {
 
+    //     },
+    //     // body: JSON.stringify({search: searchMovie})
+    // })
+    // const result = await response.json();
+    // console.log(">>>result",json)
 })
- 
+//(`http://www.omdbapi.com/?s=${searchMovie}&apikey=302738ca`, {
