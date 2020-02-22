@@ -2,22 +2,18 @@
 const express = require("express");
 const app = express();
 
+// CORS 
 cors = require('cors'); 
-
 app.use(cors());
-// app.options('*', cors());
 
-// HTTP request logger middleware for node.js.
 // Логгирование деталей запросов.
 const morgan = require("morgan");
 app.use(morgan("dev"));
 
 const path = require('path');
 
-// Обработка POST запросов.
-// urlencoded.
+// urlencoded // json.
 app.use(express.urlencoded({extended: true}));
-// json.
 app.use(express.json());
 
 // Импорт маршрутов.
@@ -30,10 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-
 // Подключаем импортированные маршруты с определенным url префиксом.
 app.use('/', indexRouter);
-
 
 // Обработка ошибок.
 app.use((req, res, next) => {

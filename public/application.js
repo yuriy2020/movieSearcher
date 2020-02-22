@@ -10,7 +10,7 @@ document.forms["searchForm"].addEventListener('submit', async (event) => {
 
     let searchMovie = event.target.children[0].value
     console.log('Client send>>>', searchMovie);
-    window.location =`/search/${searchMovie}`
+    window.location = `/search/${searchMovie}`
 
     // const response = await fetch(`/search/${searchMovie}` , {
     //     method: 'GET',
@@ -22,12 +22,23 @@ document.forms["searchForm"].addEventListener('submit', async (event) => {
     // const result = await response.json();
     // console.log(">>>result",json)
 })
+document.querySelector('.register')
+    .addEventListener('click', async (event) => {
+        event.preventDefault();
+        const register = await fetch('/register' , {
+            method: "GET",
+            headers:{
+                // 'Content-Type': 'application/json',
+            }
+        })
+    })
+
 //(`http://www.omdbapi.com/?s=${searchMovie}&apikey=302738ca`, {
 
 
     // document.querySelector('.container-movie').addEventListener('click', async (event) =>{
     //     console.log(event.target.parentNode);
-        
+
     //     if (event.target.parentNode.className === "movie-open"){
     //         event.preventDefault();
     //         window.location = `/movie/${event.target.parentNode.href}`

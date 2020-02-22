@@ -70,3 +70,6 @@ width: 200px;
     font-size: 20px;
     text-align: center;
   }
+  .register a:hover{
+   background-color: brown;
+  }
