@@ -23,3 +23,13 @@ document.forms["searchForm"].addEventListener('submit', async (event) => {
     // console.log(">>>result",json)
 })
 //(`http://www.omdbapi.com/?s=${searchMovie}&apikey=302738ca`, {
+
+
+    // document.querySelector('.container-movie').addEventListener('click', async (event) =>{
+    //     console.log(event.target.parentNode);
+        
+    //     if (event.target.parentNode.className === "movie-open"){
+    //         event.preventDefault();
+    //         window.location = `/movie/${event.target.parentNode.href}`
+    //     }
+    // })

@@ -20,7 +20,19 @@ router.get('/search/:id', async function (req, res) {
     //   console.log('>>>>>>>', data)
     //   res.render('index', { result: data })
     // })
+
     console.log(result.Search);
     res.render('index', { result: result.Search })
 })
+
+router.get('/movie/:url', async function (req, res) {
+  const url = req.params.url
+  console.log('search>>>>>>>>', req.params.url)
+
+  let result = await (await fetch(`http://www.omdbapi.com/?i=${url}&apikey=302738ca`)).json();
+    
+    console.log(">>>>result >",result);
+    res.render('movie', { result: result})
+})
+
 module.exports = router;

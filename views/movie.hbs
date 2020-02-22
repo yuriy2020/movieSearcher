@@ -23,21 +23,27 @@
       </form>
     </div>
   </div>
+  <div class="container">
 
-  <div class="container movie container-movie">
-    {{#each result}}
-    <div class="box">
-      <a href="/movie/{{imdbID}}" class="movie-open">
-        <img width="300px" height="450px" src="{{Poster}}" alt="picture">
-      </a>
-      <span class="title">{{Title}}</span>
+    <div class="content">
+      <div class="header">
+       
+        <img src="{{result.Poster}}" alt="pic">
+      </div>
+      <div class="text">
+         <h2>Title:{{result.Title}}</h2><hr>
+         <h4>{{result.Genre}}</h4>
+         <h4>Year:{{result.Year}}</h4>
+        <span>Actors:{{result.Actors}}</span><br>
+        <span>{{result.Plot}}</span>
+      </div>
+
     </div>
 
 
-    {{/each}}
-    </class="title">
 
 
+  </div>
 
 
 
