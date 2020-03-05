@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 
+
 // FETCH Server side
 const fetch = require('node-fetch');
 
@@ -33,4 +34,8 @@ router.get('/movie/:url', async function (req, res) {
     res.render('movie', { result: result})
 })
 
+router.get('/register', async function(req,res) {
+  console.log('Server>>>');
+  res.end()
+})
 module.exports = router;
