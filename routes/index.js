@@ -17,12 +17,12 @@ router.get('/search/:id', async function (req, res) {
   let result = await (await fetch(`http://www.omdbapi.com/?s=${id}&apikey=302738ca`)).json();
 
   // разобраться!!
-    // .then(res => res.json())
-    // .then(json => {
-    //   const data =json.Search
-    //   console.log('>>>>>>>', data)
-    //   res.render('index', { result: data })
-    // })
+  //   .then(res => res.json())
+  //   .then(json => {
+  //     const data =json.Search
+  //     console.log('>>>>>>>', data)
+  //     res.render('index', { result: data })
+  //   })
     
     res.render('index', { result: result.Search })
 })
